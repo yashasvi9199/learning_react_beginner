@@ -1,0 +1,34 @@
+All the parameters of components (variable or props) are in object in react
+Thus 'State' works in similar ways to props.
+
+However, the variables can be manipulated into whatever we want as they are merely JSON like object with key and value (in any datatype)
+
+Use setState : 
+    If we wish to change the value of an element in state, we need to use this.setState
+    React components are 'asyncronous' in nature which means that if you wish to add a code that will run after this.setState then use below syntax
+
+    syntax : 
+        this.setState({
+            <some changes in element(s) of object
+        }, <beginning arrow function>
+        () => {
+            <some code that runs after this.setState changes are made>
+        })
+
+Code used in Counter Program
+
+Syntax for setState:
+    this.setState( (parameter,props) => ({
+        <some changes in element(s) of object
+    }) )
+
+The parameter here is a name to state of our current State (or object) which can be used to make changes as per our needs.
+A point to be noted is the 'prevStat' = this.state (before ane change in block)
+We are not using props in this program but it can be used as well
+
+For example : 
+    a = 10;
+    b = 0;
+    b = a; 
+However, in this case if we wish to preserve the previous state of 'b' which is 0, we can use it with the help of above syntax.
+

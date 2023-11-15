@@ -1,10 +1,10 @@
 import './App.css';
-import Counter from './components/State_counterProgram';
+import Message from './components/State_setState';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      <Message />
     </div>
   );
 }
