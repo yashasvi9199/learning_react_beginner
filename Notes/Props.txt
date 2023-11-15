@@ -1,0 +1,22 @@
+props are "Paramteres" passed in to the functions/class components
+Please do not change the nomenclature. Although, they can be named anything in here for convextional used, it is suggested to not do so currently.
+
+props.name reflects to attribute name in App.js main file.
+assuming suntax called is :
+    <Heroes name="Peter" heroName="SpiderMan">
+    <p> He was bit by a spider </p>
+    </Heroes>
+
+name and heroName are attribute and thus elements of an object called props(here as naming nomenclature).
+children element in object 'props' is whatever that has been passed in component tags. Here it was a paragraph but it can be abything 
+<refer to ./Notes/Apps.js Files/Function Component.js>
+
+We need to use {} to ask JSX to convert the elements of props into elements otherwise they will be converted to plain text.
+
+
+Class Component : 
+
+to access props, everything wil remain same but an addition of 'this' keyword will be added into class component so that we can access elements.
+
+
+*** Prop are are objects and are READ ONLY in react. Thus we cannot assign the value of element in any component (be it Class or Function)

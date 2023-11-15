@@ -1,0 +1,18 @@
+Function Components :-
+    Simple functions
+    takes props and returns a declaration
+    Should be used as much as possible 
+    Absence of 'this' keyword
+    Solution without using state
+    Mainly responsible for UI
+    aka. Stateless/Dumb/Presentational
+    No longer called Stateless post React 16.x update as Hooks are available for all
+
+
+
+Class Components :-
+    More Feature rich
+    Maintain their own private data - state
+    Complicated UI logics
+    Provide lifecycle hooks
+    aka. Statefull/Smart/Container

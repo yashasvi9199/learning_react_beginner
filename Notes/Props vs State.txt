@@ -1,0 +1,8 @@
+Props :-                                State :-
+    Passed to the component                 Managed within the component
+    Function parameters                     Variables declared in function body
+    Immutable(Read Only)                    Can be changed
+    Use:                                    Use:
+        props (function component)              useState Hook (function component)            
+        this.props(class component)             this.state (class component)
+ 

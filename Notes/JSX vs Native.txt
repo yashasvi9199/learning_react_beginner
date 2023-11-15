@@ -1,0 +1,21 @@
+JSX stands for Javascript XML
+it is XML type input language for React
+We import React from 'react' library for the very same purpose.
+react library has a function called React.createElement that helps in rendering the JSX code into react native language.
+
+
+Syntax : object for imported 'react' is React
+React.createElement('<tag name>', {<attributes in json/ key Value pair>}, 'value inside tag');
+
+note for attribute : use className (camel case) instead of Class
+as Class is a reserved keyword in react for creating Statefull Class Component.
+
+JSX is suger coated syntax for calling React.createElement
+This is why it is must to import React for 'react' library on every react file because we will be using JSX and then it will be converted to React.createElemet automatically due to same import.
+
+JSX differences : 
+class = className
+for = htmlFor
+camelCase attributes like 
+    onclick = onClick
+    tabindex = tabIndex
