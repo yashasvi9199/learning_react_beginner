@@ -1,8 +1,8 @@
-## The Project only contacins script files where code has actually been written/chaged.
+## The Project only contains script files.
 
 Please ensure that you are creating a npm project and then pasting these files in the project.
 
-The files are in co relation to [@Codeevolution](https://www.youtube.com/watch?v=hzzCveeczSQ&list=PLC3y8-rFHvwhiQJD1di4eRVN30WWCXkg1&pp=iAQB)
+The files are results of what I have learnt on [@Codevolution](https://www.youtube.com/watch?v=hzzCveeczSQ&list=PLC3y8-rFHvwhiQJD1di4eRVN30WWCXkg1&pp=iAQB)
 
 Check out the playlist in case you need assistance.
 
