@@ -1,0 +1,11 @@
+There are 2 variants of ternary operation in react library
+    1. Common variant
+    2. Short Circuit Method
+
+Short Circuit method only have 'if' part of the code
+In a situation where condition does not meet, nothing will be rendered.
+
+Syntax : 
+
+    Ternary :   <condition> ? <if true> : <if false>
+    SC Method:  <condition> && <if true>
