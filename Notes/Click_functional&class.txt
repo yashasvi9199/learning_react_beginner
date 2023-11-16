@@ -1,0 +1,12 @@
+For Functional component : add 'function' keyword before the function declaration
+For Class component : declare it as per usual js norms
+                      Make sure to use 'this' keyword while calling the function on event
+
+There are two syntax for calling a function on event : 
+    (i).  onClick = { <function name> }
+    (ii). onClick = { () => <function name>() }
+
+In a simple situation, we need not add parenthesis on the function call. If done, then it will immediately execute the function onLoad.
+for eg. : onClick = { <function name>() }
+This will be called immediately unless it is called under an ES6(+) arrow function.
+
