@@ -1,0 +1,35 @@
+There are 4 approaches :-
+    1. use 'bind' to bind the event while calling the function(aka class property)
+    2. arrow function
+    3. binding the class property in class constructor
+    4. binding in class property with arraow function
+
+The 1. and 2. are traditional approach of event binding done while rendering
+The 3 is most suitable approach
+The 4. is fastest and was experimental while the video was being made
+
+Differences : 
+    Approach 1. Is time complex and only works in small programs
+    Approach 2. is usable only in a situation where we are not dealing with multiple children component
+    Approach 3. is time complex but is fast method. It works at (pre)rendering
+    Approach 4. is fastest as it does not have time complexity during redering and only works during function calling
+
+Check the console to find whether it is affeccting the rendering process or not
+
+Syntax {assuming function name is clickEvent()}: 
+
+Approach 1. 
+    onClick = {this.clickEvent,bind(this)}
+
+Approach 2.
+    onClick = {() => this.clickEvent}
+
+Approach 3. (in constructor)
+    this.clickEvent = this.clickEvent.bind(this)
+
+Approach 4. (in class property/ function declaration)
+    clickEvent = () => {
+        this.setState({
+            <changes to be made>
+        })
+    }
