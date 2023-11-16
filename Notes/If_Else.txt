@@ -1,0 +1,7 @@
+There are 2 approaches for Condition Redering - IF/Else :-
+    return based on condition
+    set condition and return value of variable
+
+1. We decided the name of message based on a condition we set earlier. Same is the case for changing the logg status. Then 'directly' returned the message.
+
+2. We returned different type of button based on conditioning with multiple return statement.
