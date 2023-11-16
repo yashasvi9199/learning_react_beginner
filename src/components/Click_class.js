@@ -17,4 +17,3 @@ class Click_class extends Component {
 }
 
 export default Click_class
- 

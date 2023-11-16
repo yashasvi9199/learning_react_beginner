@@ -1,0 +1,31 @@
+Parent Component : 
+    Since we will be using state to be assigned somewhere, we will use EventBinding (do not confuse it with the reason from below comments)
+    Convectional ES7 methods are used in alert body. The same can be written with concatination(+) sign as well but using 'back tick (` `)' is much easier.
+        to use ES7 method, we will only need ${} to add value of any variable/parameter which is not text.
+    In props we are directly sending our class property/function/Method to child component for use. This here has not other purpose apart from sending the event
+    which is why we have binded the event while creating the function
+
+
+Child Component : 
+    We used Functional component for ease of usage but class component can be used as well.
+    'props' were passed as parameters received from Parent component. Notice that this the 'method' we sent for usage on button to child
+    This acts like a code written on 2 different files, but communicating to each other as if they are seated in front of each other.
+    'child' as parameter has been passed in string format to main Method created in Parent component.
+
+
+Workaround : 
+    App.js calls Parent Component.
+    Parent Component have function (or method)
+    Parent Component calls Child Component
+    Child Component has button for visuals.
+    Child Component receives the calling 'method' from Parent Component and treats it as its own.
+    Method is called with some parameters.
+    Parent Component receives the parameters to be used while execution of method.
+    Method is called and output is shown.
+    End
+
+
+Make sure that you use EventBinding (arrow functions) only in cases where we are rendering the data from JSX.
+That is, when we are receiving the data from from child component.
+
+However, while we are only sending the data to child component via props/function properties, we need not use arrow function as it will result in 'undefined data'
