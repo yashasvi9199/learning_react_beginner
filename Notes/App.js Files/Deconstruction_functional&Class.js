@@ -1,5 +1,5 @@
 import './App.css';
-import DeconsDefault from './components/Deconstruction_class';
+import DeconsDefault from './components/Deconstruction_fuctional';
 
 function App() {
   return (
