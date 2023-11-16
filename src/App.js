@@ -1,12 +1,5 @@
-import './App.css';
-import MethodsProps_parent from './components/MethodsProps_parent';
+{/*
 
-function App() {
-  return (
-    <div className="App">
-      <MethodsProps_parent />
-    </div>
-  );
-}
+  PLEASE IMPORT THE DESIRED App.js FILE FROM PATH :  ./Notes/App.js Files
 
-export default App;
+*/}
