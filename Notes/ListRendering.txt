@@ -1,0 +1,44 @@
+Part 1 : 
+    created a functional component
+    created a 1D array
+    directly printed the elements of array by their index value in return block
+    ..this is similar to what is being done in vanilla JS
+
+
+Part 2 : 
+    working with 1D arrays (only difference in Part 2 and Part 3)
+    There are 2 ways mentioned here 
+
+    way 1 (easier) -
+        in return block, we decompose the array
+        Map is used to get the elements of array and store in paramter 'dcHero'
+        This will be directly printed
+
+    way 2 (complex / Part 3) -
+        a constant variable 'MCU' holds the decomposed elements of array
+        this variable is then returned directly in return block under {} braces to get value (and not print a text)
+
+
+
+Part 3 : 
+    created a functional component
+    declared a 2D Array
+    saved the elements of Array in a constant variable 'heroes' using MAP
+    where 'person' is the parameter for storage of values/data
+    return prints the values of the variable 'heroes' using {} braces to get value (and not print a text)
+
+
+Part 4 : 
+
+    Parent : 
+        created a functional component.
+        declared a 2D Array.
+        decomposed the array using Map where parameter is 'person'.
+        called the Child component
+        attribute are passed as props to the component
+        This will enable the CHild component to have some props to work with (like communicating)
+
+    Child : 
+        created a functional component
+        used the props under {} as it is not an ES arrow function
+        using props to display a return
