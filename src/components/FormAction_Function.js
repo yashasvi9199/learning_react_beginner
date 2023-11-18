@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./StyleSheet.css";
-import FormAction_Class from "./FormAction_Class";
 
 function FormAction_Function(props) {
   //Using useState to get 'state' in functional component
