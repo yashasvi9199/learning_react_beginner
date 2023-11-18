@@ -1,0 +1,64 @@
+Styling React Components are of 4 types : 
+    1. CSS Stylesheets
+    2. Inline Styling
+    3. CSS Modules
+    4. CSS in JS Libraries {not discussed in topics} (prefer Styled Components)
+
+1. CSS Stylesheets 
+    (a).we simply create a stylesheet css file and import the same in component so that we can use the classes
+        the tag attribute will be 'className' in camel case
+        the value of attribute will be in single quotes
+        to use multiple classes : simple give a space and add the class name
+
+    (b).using props as parameter for component's class 
+        we used {} to pass the prop in App.js as we want true (as boolean) to be passed and true(as plain text)
+        we have already created a class called 'primary' in css file
+        now we create a variable 'classAttr' to store the className based on codition from props
+        if the props are true ? we give className={primary} else : className={''} 
+        we cannot change it withing the component as it is a prop. Which is why I have created another button to use class in Functional component
+        to use multiple classes : cover whole in {} and follow standard ES rules with `` to get text and ${} to get value of variable
+
+        //Button cases
+        I have used {useState} to create a class in functional component (check reference at bottom)
+        I stored the value of prop in a variable abd then passed it to attribute(here, otherwise a className) in {} as I wish to use the value of variable
+         
+
+Use State : 
+    state can only be created in a Class Component.
+    to use state in a Functional Component, we need to import useState and use it as followed.
+
+    syntax : 
+        const [<variable name> <functionName to change value>] = useState(<initial value>)
+        <function name to change value>(<value)
+    aka in class constructor: 
+        this.state({
+            <variable name> : <initial value>
+        })
+
+        <function name to change value in class is setState>
+        this.setState({
+            <variable name> : <value>
+        })<function name to change value>
+
+
+2. Inline Styling
+    create an object and store the css style attribute
+    syntax : 
+        const <object name> = {
+            <style name> = ' <value> ',
+            <style name> = ' <value> '
+
+        }
+    note that style name should be in camelCase like fontSize,fontColor i.e. if it has hyphen (-) in its actual name
+    the value should always be in string
+    add comma (,) to add multiple css attributes to an object and then call it with {} after keyword 'style'
+
+
+3. CSS Modules
+    if we import a style in main file (say, App.js), then it will automatically be applied to all its component files as well
+    to prevent that, we have CSS Module files that prevent the usage of classes with child-inheritence
+    to use it, the file must be name with extension ' .module.css ' and
+    imported like any component file (with reference name and path)
+    This reference name now can be used to call a specific css attribute from the module file
+    If we try to use the module file in child component, we need to import it over there as well else it will throw and error. WHy?
+        well logically the reference variable is not prensent in child component so it will throw error
