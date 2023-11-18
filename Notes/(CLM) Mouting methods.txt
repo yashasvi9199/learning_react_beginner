@@ -1,0 +1,42 @@
+1. Constructor
+    - a special function that will get called whenever a new component is created
+    - initializing state
+    - binding the event handlers
+    - do not cause side effects ex: HTTPS request
+
+2. static getDerivedStateFromProps (props, state)
+    - rarely used method
+    - when state of the component depends upon the change of props over time
+    - create state as an object here as it does not inherit 'this' keyword
+    - do not cause side effects
+
+3. render ()
+    - required method in class component
+    - read props & state and return JSX
+    - Do not change state
+    - do not interact with DOM
+    - do not make AJAX calls
+    - Children component lifecycle method are also excecuted
+
+4. componentDidMount()
+    - invoke immediately after component and all ites Children component have been rendered to the DOM
+    - cause side effects ex: interact with DOM or perform and AJAX calls to load data
+
+
+Execution order (standalone) : 
+    Constructor
+    getDerivedStateFromProps
+    render
+    componentDidMount
+
+Execution order (parent-child component) : 
+    Parent Constructor
+    Parent getDerivedStateFromProps
+    Parent render
+
+    Child Constructor
+    Child getDerivedStateFromProps
+    Child render
+    Child componentDidMount
+    
+    Parent componentDidMount

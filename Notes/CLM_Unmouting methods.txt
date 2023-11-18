@@ -1,0 +1,7 @@
+1. componentWillUnmount()
+    - method invoked immediately before a componentis unmouted and destroyed
+    - cancelling any network request
+    - removing event handlers
+    - cancelling any subscriptions
+    - invalidation timers (setTimeOut or setInterval)
+    - do not call the setState method

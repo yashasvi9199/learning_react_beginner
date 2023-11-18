@@ -1,0 +1,25 @@
+There are 4 types in total : 
+    1. Mounting
+    2. Updating
+    3. Unmounting
+    4. Error Handling
+
+1. Mounting
+    - constructor
+    - static getDerivedStateFromProps
+    - render
+    - componentDidMount
+
+2. Updating
+    - static getDerivedStateFromProps
+    - shouldComponentUpdate
+    - render
+    - getSnapshotBeforeUpdate
+    - componentDidUpdate
+
+4. Unmounting
+    - componentWillUnmount
+
+5. Error Handling
+    - static getDerivedStateFromError
+    - componentDidCatch

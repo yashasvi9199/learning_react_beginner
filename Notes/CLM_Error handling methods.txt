@@ -1,0 +1,9 @@
+1. static getDerivedStateFromError(error)
+2. componentDidCatch(error, info)
+
+when there is an error 
+    - during rendering
+    - ina lifecycle method
+    - in the constructor of any child
+
+--will be discussed later during error handling task

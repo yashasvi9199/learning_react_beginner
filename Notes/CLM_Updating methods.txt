@@ -1,0 +1,75 @@
+1. static getDerivedStateFromProps(props, state)
+    - method is called every time a component is re-rendered
+    - set the state
+    - rarely used method
+    - do not cause side effects
+
+2. shouldComponentUpdate(nextProps, nextState)
+    - dictates if the component should re-render or not
+    - default - all class component re-render (but this stops it)
+    - rarely used method
+    - method return {true} or {false}
+    - does not cause side effects
+
+3. render()
+    - required method in class component
+    - read props & state and return JSX
+    - Do not change state
+    - do not interact with DOM
+    - do not make AJAX calls
+
+4. getSnapshotBeforeUpdate(prevProps, prevState)
+    - saves previous props or state
+    - called right before the changes from the virtual DOM are to be reflected in the DOM
+    - rarely used method
+    - capture some information from the DOM ex : capture user scroll position and maintain that scroll position with some calculation after update
+    - Method will either return null or a value.
+    - returned value will be passed as the third parameter to next method (as snapshot)
+
+5 componentDidUpdate(prevProps, prevState, snapshot)
+    - called after the render is finished in the re-render cycles
+    - make sure that component has sucessfully re-rendered after the update
+    - called only once in component
+    - cause side effects
+
+Execution Order (standalone): 
+    1.constructor
+    2.getDerivedStateFromProps
+    3.render
+    4.componentDidMount
+
+    -- after update --
+
+    1.getDerivedStateFromProps
+    2.shouldComponentUpdate
+    3.render
+    4.getSnapshotBeforeUpdate
+    5.componentDidUpdate
+
+
+Execution Order (parent-child component):
+    1.Parent constructor
+    2.Parent getDerivedStateFromProps
+    3.Parent render
+
+    4.Child constructor
+    5.Child getDerivedStateFromProps
+    6.Child render
+    7.Child componentDidMount
+    8.Parent componentDidMount
+
+    -- after update --
+
+    1.Parent getDerivedStateFromProps
+    2.Parent shouldComponentUpdate
+    3.Parent render
+
+    4.Child getDerivedStateFromProps
+    5.Child shouldComponentUpdate
+    6.Child render
+    7.Child getSnapshotBeforeUpdate
+
+    8.Parent getSnapshotBeforeUpdate
+
+    9.Child componentDidUpdate
+    10.Parent componentDidUpdate
