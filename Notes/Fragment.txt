@@ -1,0 +1,36 @@
+Fragments are methods from react library that helps in returning JSX
+In render/return function we usually have to return multiple line code in single parent element container (which is usually <div> tag)
+Fragments eliminate the requirement for same
+
+This is usual process that we follow since multiple elements cannot be returned
+return(
+    <div>
+        <h1>Hello User!!</h1>
+        <button>Click Me</button>
+    </div>
+)
+
+Syntax : 
+return(
+    <React.Fragment>
+    ...
+    <lines of codes>
+    ...
+    </React.Fragment>
+)
+
+Nothing else should be returned in the code after or before the Fragment block else it will throw an error.
+The compiler will not be able to read anything apart from Fragment if added after the Fragment block. 
+If added before the Fragment block, the fragment block will not be reachable
+
+
+Fragment Parent : 
+    includes a div element block to return a table.
+    observe that instead of <td> tag we are calling the child component that contains the required table data and tags.
+    we also passed a prop for Child component
+
+Fragment Child : 
+    instead of using a <div> tag to return the b lock of code we used Fragment
+    reason being that we cannot render a <td> element in a <div> tag in HTML DOM tree.
+    to remove that specific tag we replaced it with React.Fragment that does not create an additional element tag during render.
+    instead of typing the whole tag, we only added empty opening and closing tags. React will automatically consider them as fragment
