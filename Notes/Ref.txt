@@ -1,4 +1,4 @@
-Refs are references to particular JSX element
+Refs are references to particular DOM element
 The properties are held inside 'Current' element thus whenever we wish to use the ref, we redirect them through current element
 Ref is required to be declared in 'constructor' of Class Component
 There are 2 types : 
@@ -10,7 +10,7 @@ There are 2 types :
     - Syntax : this.<ref variable name> = React.createRef()
     - this.<ref name> will be an object holding all the properties of element
     - element ' current ' in the object holds all properties
-    - assign syntax (as an attribute to JSX element) : ref = {this.<ref variable name>}  P.S. the keyword 'ref' is used to assign specific ref to JSX element
+    - assign syntax (as an attribute to DOM element) : ref = {this.<ref variable name>}  P.S. the keyword 'ref' is used to assign specific ref to DOM element
     - usage syntax : this.<ref name>.current.<property name>
 
 2. Callbacl Ref
@@ -24,8 +24,43 @@ There are 2 types :
         = this.<ref variable name> = null
         = this.<ref method name> = (parameter name <usually element>) => {
                 this.<ref variable name> = <parameter name>
-            }                                                                   P.S. this will assign the JSX element's properties to ref name
+            }                                                                   P.S. this will assign the DOM element's properties to ref name
     - assign syntax : ref={this.<ref method name>} 
     - usage syntax : this.<ref variable name>.<property name>                            P.S. no need to add 'current'
     - ensure that ref name is not empty (or null) before usage using if/else rendering
-    - also make sure to use 'ref method' during assignment to JSX element and use 'ref variable name' to call the properties in ref
+    - also make sure to use 'ref method' during assignment to DOM element and use 'ref variable name' to call the properties in ref
+
+------------------- Ref for Class Component ---------------------
+
+Refs can be used for Class Components as well (but not for Functional Component)
+usually it is used for DOM elements.
+
+Ref_Class_parent.js and Ref_Class_child.js
+
+Child Component
+    an input field with a Ref was created
+    a function is created to focus on input field.
+    P.S. the function was not being called here but it is called Class Property for a reason. <ref can call properties of elements>
+
+Parent Component
+    child class component is called and given the Ref
+    a button is created with onClick event handler
+    the event triggers ref properties.
+    the property is the class property (aka function) created in child component
+
+Woraround :->
+    Parent Class Component calls the Child Class Component and given class a ref (to access its class properties)
+    Button calls an event
+    Event calls the Child Class Property
+    Child Class Property checks ref assigned to input field
+    calls the function and focusses on input field
+
+
+------------------- Ref Forwarding -------------------
+- only works with arrow function in Class/Functional Component
+- library used from React is called : React.forwardRef()
+- syntax : const <function name> = React.forwardRef( (props, refs) => { .. return block } )
+- when component is passed as a parameter in function, the function will receive ref as 2nd parameter and props will be 1st parameter
+- now using the 'ref' parameter, we can assign it to DOM element in child component
+- using this single ref can be used in parent and child
+- rarely used concept
