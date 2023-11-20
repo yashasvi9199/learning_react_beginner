@@ -1,0 +1,31 @@
+Refs are references to particular JSX element
+The properties are held inside 'Current' element thus whenever we wish to use the ref, we redirect them through current element
+Ref is required to be declared in 'constructor' of Class Component
+There are 2 types : 
+    1. React.createRef
+    2. CallBack Ref
+
+1. React.createRef()
+    - defined in constructor of class component
+    - Syntax : this.<ref variable name> = React.createRef()
+    - this.<ref name> will be an object holding all the properties of element
+    - element ' current ' in the object holds all properties
+    - assign syntax (as an attribute to JSX element) : ref = {this.<ref variable name>}  P.S. the keyword 'ref' is used to assign specific ref to JSX element
+    - usage syntax : this.<ref name>.current.<property name>
+
+2. Callbacl Ref
+    - also defined in constructor of class component
+    - steps of usage : 
+        = create ref property
+        = define null to ref property
+        = create an arrow function for ref method to get element properties
+        = use ref method
+    - syntax :  
+        = this.<ref variable name> = null
+        = this.<ref method name> = (parameter name <usually element>) => {
+                this.<ref variable name> = <parameter name>
+            }                                                                   P.S. this will assign the JSX element's properties to ref name
+    - assign syntax : ref={this.<ref method name>} 
+    - usage syntax : this.<ref variable name>.<property name>                            P.S. no need to add 'current'
+    - ensure that ref name is not empty (or null) before usage using if/else rendering
+    - also make sure to use 'ref method' during assignment to JSX element and use 'ref variable name' to call the properties in ref
