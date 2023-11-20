@@ -1,0 +1,6 @@
+Memo is just like pure component with the only factor that
+
+PureComponent are used for Class Components
+Memos are used for Functional Components
+
+Please refere to PureComponent.txt in notes for other notes/points
