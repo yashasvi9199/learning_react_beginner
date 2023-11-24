@@ -1,0 +1,23 @@
+ErrorHandling Parent :
+    we began with creation of a state {props can also be called from App.js}
+    mapping through the state array, to check if the heroName is 'Joker' and throw an error if conditions meet.
+    if we comment from line 13-16, we will find no such error and 2 items will be printed as needed.
+    However, with uncommented lines we immediately get an error : Not A Hero
+
+
+ErrorHandling Child : 
+    we will define the structure to handle the errors in parent class
+    a state elemenet 'hasError' is created for checking error - true/false
+    ErrorBoundingMethod from CLM is used now to change the state of component.
+    Based on the condition we return 2 blocks. 1st block (if error is true) with error message and 2nd block (if error is flase) with children component
+
+    this.prop.children usage :
+        - to render all the components or elemenets which will be inside the <child component> tag
+        - to do that we go in App.js 
+        - call child component and instead of self closing tag, we will use opening and closing tags here.
+        - and the parent component will be called inside these tags
+
+
+Note : if you still see an error 'Not A Hero'
+it's okay as this is a development project. When the project is built for production, this error will not be there.
+Check the actual text on back of the error which has changed

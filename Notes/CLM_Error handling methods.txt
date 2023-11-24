@@ -3,7 +3,20 @@
 
 when there is an error 
     - during rendering
-    - ina lifecycle method
+    - in a lifecycle method
     - in the constructor of any child
 
---will be discussed later during error handling task
+
+1. static getDerivedStateFromError(error)
+    - it helps in changing the state elemenet in class component
+    - it is called only once
+    - it is called before the error is thrown
+    - setState is not required to change the state in this method
+
+2. componentDidCatch(error, info)
+    - it takes two parameters : error and info on error
+    - it is called when an uncaught error was thrown from render or another lifecycle method
+    - it is called only once
+    - it is called after the error is thrown
+    
+Reference : ErrorHandling.txt

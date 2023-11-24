@@ -1,10 +1,14 @@
-import Map_parent from "./component/Map_parent";
+import ErrorHandling_child from "./component/ErrorHandling_child";
+import ErrorHandling_parent from "./component/ErrorHandling_parent";
+
 
 
 function App() {
   return (
     <div className="App">
-      <Map_parent />
+      <ErrorHandling_child>
+        <ErrorHandling_parent />
+      </ErrorHandling_child>
     </div>
   );
 }
