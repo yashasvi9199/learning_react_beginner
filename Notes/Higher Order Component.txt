@@ -1,0 +1,29 @@
+old files : 
+    click and hover feature was added in both the components for functionality that works perfect
+    However, we can notice that we have to use same function twice in both the components which 'not as efficient' in programming
+    to improve the same, we will introduce High Order Component as parent in picture.
+
+Something to be noted is that this component will not be imported in App.js but the other components
+
+Syntax of usage:
+    const NewComponent = higherOrderComponent(OriginalComponent)
+    eg :
+    export default <higherOrderComponent>(OriginalComponent, params)
+
+Syntax of decalration : 
+    const <higherOrderComponent> = (<OriginalComponent>, params) => {   <higherOrderComponent> is just name of new HigherOrder method we will use in other components
+        class <NewComponent> extends React.Components {                 <NewComponent> is a new variable for ease of decalration
+            *functions*                                                 we can add our function in this part of class
+            render(){                                                   Since we are using a class method, render() is required
+                return (                                                returning the elements to be rendered
+                    <OriginalComponent tag                              We render the <OriginalComponent> in self closing tag which is the result after processings
+                    props in HOC                                        note that anything can be passed in these props including functions that were declared in HOC
+                    {...this.props}                                     to allow OriginalComponent to show it's own props as well
+                    />                                                      something worth noting is without ...this.props, OG will not get original props
+                )                                                        
+            }
+        }
+        return <NewComponent>                                           cont <higherOrderComponent> returns a value which is <NewComponent> after processings
+    }
+
+    export default <higherOrderComponent>                               export default to make it usable (and to be imported) in other components
